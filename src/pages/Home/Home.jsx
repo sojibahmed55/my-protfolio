@@ -7,6 +7,7 @@ import About from '../About/About';
 const Home = () => {
     return (
         <div id='home'>
+            
             <HeroSection></HeroSection>
             <About></About>
             <Skill></Skill>

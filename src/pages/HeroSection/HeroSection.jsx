@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { ArrowRight } from "lucide-react";
 // import profilePic from "../assets/profile.jpg";
+import profilePic from '../../assets/99c6ac6e-3037-48aa-b83f-cf4b8805f3f1 (2) (1).jpg'
 
 const HeroSection =()=> {
   return (
@@ -89,14 +90,35 @@ const HeroSection =()=> {
           transition={{ duration: 0.8 }}
           className="flex-1 flex justify-center"
         >
-          <div className="relative group">
+          {/* <div className="relative group">
             <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-lg opacity-60 group-hover:opacity-90 transition duration-300"></div>
             <img
-              src="{profilePic}"
+              src={profilePic}
               alt="Profile"
               className="relative rounded-xl w-72 h-80 object-cover border-2 border-transparent group-hover:border-indigo-400 transition duration-300"
             />
-          </div>
+          </div> */}
+          {/* <div className="relative group">
+  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-lg opacity-60 group-hover:opacity-90 transition duration-300"></div>
+  <img
+    src={profilePic}
+    alt="Profile"
+    className="relative rounded-xl w-96 h-[500px] object-cover border-2 border-transparent group-hover:border-indigo-400 transition duration-300"
+  />
+</div> */}
+
+<motion.div
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="flex-1 flex justify-center"
+        >
+          <img
+            src={profilePic} // make sure this is high-resolution
+            alt="Profile"
+            className="w-96 h-[500px] object-cover"
+          />
+        </motion.div>
         </motion.div>
       </div>
     </section>

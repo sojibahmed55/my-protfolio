@@ -17,6 +17,7 @@ import {
   SiExpress,
 } from "react-icons/si";
 import { useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const skills = [
   { name: "JavaScript", icon: <FaJs size={40} />, color: "#facc15" },
@@ -66,6 +67,29 @@ const Skill =()=> {
           className="text-4xl md:text-5xl font-bold mb-6"
         >
           My <span className="text-pink-500">Skills</span>
+          <h2 className="mt-3  text-2xl md:text-3xl font-semibold">
+            All Skills Here !! 
+
+            <TypeAnimation
+              sequence={[
+                "Javascript", 2000,
+                "React", 2000,
+                "Next.js", 2000,
+                "MongoDB", 2000,
+                "HTML5", 2000,
+                "CSS3", 2000,
+                "Tailwind", 2000,
+                "Firebase", 2000,
+                "Express", 2000,
+                "Git", 2000,
+                "GitHub", 2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-fuchsia-500 ml-4"
+            />
+          </h2>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}

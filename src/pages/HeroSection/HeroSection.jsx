@@ -15,7 +15,7 @@ const HeroSection =()=> {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 z-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 z-10">
 
         {/* Left Text Section */}
         <motion.div
@@ -43,7 +43,7 @@ const HeroSection =()=> {
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="text-pink-400"
+              className="text-fuchsia-500"
             />
           </h2>
 

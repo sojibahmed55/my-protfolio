@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
         {/* Logo */}
         <div className="text-2xl font-bold text-white cursor-pointer">
-          Sojib Ahmed
+          Sojib <span className="text-2xl font-bold text-fuchsia-300 cursor-pointer">Protfolio</span>
         </div>
           
 

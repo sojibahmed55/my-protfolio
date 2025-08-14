@@ -57,7 +57,7 @@ const Skill =()=> {
   }, []);
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    <section id="skills" className="py-20 mb-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}

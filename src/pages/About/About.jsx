@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedinIn, FaGithub, FaFacebookF } from "react-icons/fa";
 import { HiCode, HiDesktopComputer } from "react-icons/hi";
 
 const About = () => {
   return (
-    <section id="about" className="relative py-24 bg-gradient-to-b from-indigo-900 via-gray-900 to-purple-900 text-white overflow-hidden">
+    <section id="about" className="mb-16 relative py-24 bg-gradient-to-b from-indigo-900 via-gray-900 to-purple-900 text-white overflow-hidden">
       {/* Background stars effect */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-[url('/star-bg.png')] bg-cover bg-no-repeat bg-center opacity-30"></div>
@@ -31,10 +31,11 @@ const About = () => {
             I started learning programming with a strong motivation to explore new skills and build practical applications. I focus on JavaScript, React, and full-stack web development. Constantly improving and building real-world projects to enhance my expertise.
           </p>
 
-          <div className="flex gap-4 mt-6">
-            <a href="#contact" className="px-6 py-3 bg-pink-500 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform">Get In Touch</a>
-            <a href="/resume.pdf" target="_blank" className="px-6 py-3 border border-pink-500 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition">Download CV</a>
-          </div>
+          {/* <div className="flex gap-4 mt-6">
+            <button  className="px-6 py-3 bg-pink-500 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform">Get In Touch</button>
+            <button className="px-6 py-3 border border-pink-500 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition">Download CV</button>
+          </div> */}
+           
         </motion.div>
 
         {/* Right Cards */}
@@ -76,7 +77,6 @@ const About = () => {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

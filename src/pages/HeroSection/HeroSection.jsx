@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { ArrowRight } from "lucide-react";
-// import profilePic from "../assets/profile.jpg";
-import profilePic from '../../assets/99c6ac6e-3037-48aa-b83f-cf4b8805f3f1 (2) (1).jpg'
+import { Link } from "react-scroll";
 
-const HeroSection =()=> {
+const HeroSection = () => {
   return (
-    <section className="pt-9 min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-[#0a0f1f] via-[#0f1629] to-[#1a1f38] text-white relative overflow-hidden">
-
+    <section className="pt-9 mb-16 min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-[#0a0f1f] via-[#0f1629] to-[#1a1f38] text-white relative overflow-hidden">
       {/* BG floating particles */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute w-2 h-2 bg-indigo-400 rounded-full top-10 left-1/4 animate-ping"></div>
@@ -17,7 +15,6 @@ const HeroSection =()=> {
 
       {/* Content Container */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 z-10">
-
         {/* Left Text Section */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}
@@ -37,9 +34,12 @@ const HeroSection =()=> {
           <h2 className="mt-3 text-2xl md:text-3xl font-semibold">
             <TypeAnimation
               sequence={[
-                "Frontend Developer", 2000,
-                "UI/UX Enthusiast", 2000,
-                "Creative Coder", 2000,
+                "Frontend Developer",
+                2000,
+                "UI/UX Enthusiast",
+                2000,
+                "Creative Coder",
+                2000,
               ]}
               wrapper="span"
               speed={50}
@@ -56,18 +56,26 @@ const HeroSection =()=> {
 
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 hover:opacity-90 transition-opacity font-semibold shadow-lg"
+            
+            <Link
+              to="projects"
+              smooth={true}
+              duration={800}
+              offset={-50}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 hover:opacity-90 transition-opacity font-semibold shadow-lg cursor-pointer"
             >
               View My Work <ArrowRight size={18} />
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-full border border-gray-400 hover:border-pink-500 hover:text-pink-400 transition-colors font-semibold"
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={800}
+              offset={-50}
+              className="cursor-pointer px-6 py-3 rounded-full border border-gray-400 hover:border-pink-500 hover:text-pink-400 transition-colors font-semibold"
             >
-              Get In Touch
-            </a>
+              Get In Touch 
+            </Link>
+            
           </div>
 
           {/* Stats */}
@@ -90,38 +98,23 @@ const HeroSection =()=> {
           transition={{ duration: 0.8 }}
           className="flex-1 flex justify-center"
         >
-          {/* <div className="relative group">
+          
+          <div className="relative group">
+            {/* Glow background */}
             <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-lg opacity-60 group-hover:opacity-90 transition duration-300"></div>
-            <img
-              src={profilePic}
-              alt="Profile"
-              className="relative rounded-xl w-72 h-80 object-cover border-2 border-transparent group-hover:border-indigo-400 transition duration-300"
-            />
-          </div> */}
-          {/* <div className="relative group">
-  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-lg opacity-60 group-hover:opacity-90 transition duration-300"></div>
-  <img
-    src={profilePic}
-    alt="Profile"
-    className="relative rounded-xl w-96 h-[500px] object-cover border-2 border-transparent group-hover:border-indigo-400 transition duration-300"
-  />
-</div> */}
 
-<motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="flex-1 flex justify-center"
-        >
-          <img
-            src={profilePic} // make sure this is high-resolution
-            alt="Profile"
-            className="w-96 h-[500px] object-cover"
-          />
-        </motion.div>
+            {/* High resolution image */}
+            <img
+              src="https://i.ibb.co.com/GQnYjPzh/1755133909855.jpg"
+              alt="Profile"
+              className="relative rounded-xl w-96 h-[500px] object-cover border-2 border-transparent group-hover:border-indigo-400 transition duration-300"
+              loading="lazy"
+            />
+          </div>
+
         </motion.div>
       </div>
     </section>
   );
-}
+};
 export default HeroSection;
